@@ -1,18 +1,22 @@
 <?php
+
 /**
  * @name IndexController
- * @author frost
+ * @author Jason Wang <jasonwang4066@gmail.com>
  * @desc 默认控制器
  * @see http://www.php.net/manual/en/class.yaf-controller-abstract.php
  */
 class IndexController extends Yaf\Controller_Abstract {
 
-	/** 
+	/**
      * 默认动作
      * Yaf支持直接把Yaf_Request_Abstract::getParam()得到的同名参数作为Action的形参
      * 对于如下的例子, 当访问http://yourhost/yafapp/index/index/index/name/frost 的时候, 你就会发现不同
      */
 	public function indexAction($name = "Stranger") {
+
+        $a = Conf\Conf::get('database.host');
+        var_dump($a);
 		//1. fetch query
 		$get = $this->getRequest()->getQuery("get", "default value");
 
