@@ -1,15 +1,19 @@
 {
     "require": {
         "monolog/monolog": "^1.21",
-        "lovelock/konf": "^1.3"
+        "lovelock/konf": "dev-master",
+        "lovelock/papper": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.5"
     },
     "repositories": [
         {
             "type": "git",
             "url": "git@git.coding.net:lovelock/konf.git"
+        },
+        {
+            "type": "git",
+            "url": "git@git.coding.net:lovelock/papper.git"
         }
     ]
 }

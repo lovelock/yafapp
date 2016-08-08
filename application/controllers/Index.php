@@ -1,4 +1,5 @@
 <?php
+use Conf\Conf;
 
 /**
  * @name IndexController
@@ -15,8 +16,7 @@ class IndexController extends Yaf\Controller_Abstract {
      */
 	public function indexAction($name = "Stranger") {
 
-        $a = Conf\Conf::get('database.host');
-        var_dump($a);
+	    var_export(Conf::get('database.database'));
 		//1. fetch query
 		$get = $this->getRequest()->getQuery("get", "default value");
 
